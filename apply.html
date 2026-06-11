@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now - Rajbari Global Overseas</title>
+<link rel="stylesheet" href="apply.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+<header>
+    <h1>RGO</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO APPLY SECTION -->
+<section class="apply-hero">
+
+    <div class="apply-card">
+
+        <h2>Apply for Malaysia Study</h2>
+        <p>Fill up the form below and start your journey</p>
+
+       <form onsubmit="sendToWhatsApp(); return false;">
+
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelor">Bachelor</option>
+        <option value="Master">Master</option>
+    </select>
+  <select id="Education_level">
+        <option value="">Education level</option>
+        <option value="ssc">Ssc</option>
+        <option value="dakhil">Dakhil</option>
+        <option value="hsc">Hsc</option>
+    </select>
+    <select id="budget">
+        <option value="">Budget Range</option>
+        <option value="2-5 lakh">2-5 lakh</option>
+        <option value="5-10 lakh">5-10 lakh</option>
+        <option value="10+ lakh">10+ lakh</option>
+    </select>
+
+    <textarea id="message" placeholder="Your Message"></textarea>
+
+    <button type="submit">Submit Application</button>
+
+</form>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Rajbari Global Overseas</p>
+</footer>
+<script>
+function sendToWhatsApp(){
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let course = document.getElementById("course").value;
+    let budget = document.getElementById("budget").value;
+    let message = document.getElementById("message").value;
+    let Educationlevel= document.getElementById("Education level").value;
+
+    let url = "https://wa.me/8801350322501?text="
+        + "New Application%0a"
+        + "Name: " + name + "%0a"
+        + "Phone: " + phone + "%0a"
+        + "Email: " + email + "%0a"
+        + "Course: " + course + "%0a"
+        + "Budget: " + budget + "%0a"
+        +"Education level"+Educationlevel +"%0a"
+         + "Message: " + message;
+    window.open(url, "_blank");
+
+    alert("Application Sent Successfully!");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    /* MOBILE DEFAULT */
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("image/apply.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* DESKTOP */
+@media (min-width: 768px){
+    body{
+        background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("image/desktopapply.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* HERO LAYOUT */
+.apply-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 40px 20px;
+}
+
+/* GLASS CARD */
+.apply-card{
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    text-align: center;
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.apply-card:hover{
+    transform: translateY(-5px);
+}
+
+/* TEXT */
+.apply-card h2{
+    margin-bottom: 10px;
+}
+
+.apply-card p{
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* INPUTS */
+.apply-card input,
+.apply-card select,
+.apply-card textarea{
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px 15px;
+
+    border-radius: 12px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+
+/* BUTTON */
+.apply-card button{
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.apply-card button:hover{
+    background: #ffb700;
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .apply-card{
+        width: 95%;
+    }
+}

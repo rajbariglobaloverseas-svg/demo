@@ -1,0 +1,70 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* HERO SECTION */
+.service-hero{
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("image/service.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* GRID */
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    padding: 60px;
+}
+
+/* CARD */
+.service-card{
+    padding: 25px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service-card:hover{
+    transform: translateY(-5px);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .services{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
